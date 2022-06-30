@@ -1,0 +1,257 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "bar-application": {
+      "root": "apps/bar-application/",
+      "sourceRoot": "apps/bar-application/src",
+      "projectType": "application",
+      "prefix": "lyxormicrosite",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:build",
+          "options": {
+            "outputPath": "dist/apps/bar-application",
+            "index": "apps/bar-application/src/index.html",
+            "main": "apps/bar-application/src/main.ts",
+            "polyfills": "apps/bar-application/src/polyfills.ts",
+            "tsConfig": "apps/bar-application/tsconfig.app.json",
+            "assets": [
+              "apps/bar-application/src/favicon.ico",
+              "apps/bar-application/src/assets"
+            ],
+            "styles": [
+              "apps/bar-application/src/styles.scss"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/bar-application/src/environments/environment.ts",
+                  "with": "apps/bar-application/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "browserTarget": "bar-application:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "bar-application:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "bar-application:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/bar-application/tsconfig.app.json",
+              "apps/bar-application/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/bar-application/jest.config.js",
+            "tsConfig": "apps/bar-application/tsconfig.spec.json",
+            "setupFile": "apps/bar-application/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "bar-application-e2e": {
+      "root": "apps/bar-application-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/builders:cypress",
+          "options": {
+            "cypressConfig": "apps/bar-application-e2e/cypress.json",
+            "tsConfig": "apps/bar-application-e2e/tsconfig.e2e.json",
+            "devServerTarget": "bar-application:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "bar-application:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/bar-application-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "bar-chart": {
+      "root": "apps/bar-chart/",
+      "sourceRoot": "apps/bar-chart/src",
+      "projectType": "application",
+      "prefix": "lyxormicrosite",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:build",
+          "options": {
+            "outputPath": "dist/apps/bar-chart",
+            "index": "apps/bar-chart/src/index.html",
+            "main": "apps/bar-chart/src/main.ts",
+            "polyfills": "apps/bar-chart/src/polyfills.ts",
+            "tsConfig": "apps/bar-chart/tsconfig.app.json",
+            "assets": [
+              "apps/bar-chart/src/favicon.ico",
+              "apps/bar-chart/src/assets"
+            ],
+            "styles": [
+              "apps/bar-chart/src/styles.css"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/bar-chart/src/environments/environment.ts",
+                  "with": "apps/bar-chart/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "browserTarget": "bar-chart:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "bar-chart:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "bar-chart:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/bar-chart/tsconfig.app.json",
+              "apps/bar-chart/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/bar-chart/jest.config.js",
+            "tsConfig": "apps/bar-chart/tsconfig.spec.json",
+            "setupFile": "apps/bar-chart/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "bar-chart-e2e": {
+      "root": "apps/bar-chart-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/builders:cypress",
+          "options": {
+            "cypressConfig": "apps/bar-chart-e2e/cypress.json",
+            "tsConfig": "apps/bar-chart-e2e/tsconfig.e2e.json",
+            "devServerTarget": "bar-chart:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "bar-chart:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/bar-chart-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "./node_modules/@minotore/schematics/collection.json",
+    "analytics": false
+  },
+  "schematics": {},
+  "defaultProject": "#"
+}

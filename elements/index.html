@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Elements</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="bar-application/mwidget/resources/js/indigo-pink.css">
+
+    <!-- Widget dependencies form CDN -->
+    <script src="https://cdn.uat-seeyond.minotore.com/widgets-assets/bridge/js/v2.1.0/widget-dependencies.min.js"></script>
+    <!-- Widget dependecies END -->
+  </head>
+
+  <body>
+    <!-- Place Widgets Tags Here - Start  -->
+    <custom-widget library='El9ods'></custom-widget> 
+    <bar-chart library='el9ods'></bar-chart>
+    <custom-widget library='Oxford'></custom-widget>
+    <bar-chart library='oxford'></bar-chart>
+
+    <!-- Place Widgets Tags Here - End -->
+    
+
+    <!-- Place Widget/Widgets Scripts Files here  - Start -->
+    <script type="text/javascript" src="./bar-application/mwidget/resources/js/bar-application.js"></script>
+
+    <!-- Place Widget/Widgets Scripts Files here  - End-->
+    <script type="text/javascript" src="./bar-chart/mwidget/resources/js/bar-chart.js"></script>
+
+    <!--
+        Bridge widget Javascript file/launcher - has to be launched as the last widget
+        in order to be able to read the DOM-Present widgets and to emit the events after
+        having their Listeners Setup
+    -->
+    <!-- Bridge widget form CDN -->
+    <script src="https://cdn.uat-seeyond.minotore.com/widgets-assets/bridge/js/v2.1.0/bridgewidget.js"></script>
+    <!-- Bridge widget END -->
+  </body>
+</html>

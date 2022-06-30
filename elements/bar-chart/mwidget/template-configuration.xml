@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns="http://www.model.com"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.model.com file:/C:/Users/jawher.allani/Desktop/Template%20Configuration%20XSD/TemplateConfiguration.xsd">
+    <fields>
+        <field data-type="static" type="single-choice-select" name="name1" label="label1">
+            <option>option0</option>
+            <option>option1</option>
+        </field>
+        <field data-type="static" type="single-choice-select" name="name3" label="label3">
+            <option>option2</option>
+            <option>option3</option>
+        </field>
+        <field type="media" name="ada" label="adsda" media-type="csv">
+            <uploader allowed-seperator=":">
+                <header>Hello</header>
+                <header>Hei</header> 
+            </uploader>
+        </field>
+        <field type="single-choice-select" name="aaaa" label="xxx" data-type="static">
+            <option>ss</option>
+        </field>
+        <field type="multiple-choice-select" name="azeazea" label="aezeaz" data-type="dynamic">
+            <data-source url="Temp1.xml"/>
+        </field>
+        <field type="media" name="azeaz" label="waxdad" media-type="csv">
+            <uploader allowed-seperator=":">
+                <header></header>
+            </uploader>
+        </field>
+    </fields>
+    <models>
+        <model model-name="model-name1">
+            <field data-type="static" type="single-choice-select" name="name5" label="label5">
+                <option>option4</option>
+                <option>option5</option>
+            </field>
+            <field data-type="static" type="single-choice-select" name="name7" label="label7">
+                <option>option6</option>
+                <option>option7</option>
+            </field>
+        </model>
+        <model model-name="model-name3">
+            <field data-type="static" type="single-choice-select" name="name9" label="label9">
+                <option>option8</option>
+                <option>option9</option>
+            </field>
+            <field data-type="static" type="single-choice-select" name="name11" label="label11">
+                <option>option10</option>
+                <option>option11</option>   
+            </field>
+        </model>
+    </models>
+</configuration>   

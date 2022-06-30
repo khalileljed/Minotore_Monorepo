@@ -1,0 +1,33 @@
+{
+    "name": "monointern",
+    "dependencies": {
+        "version": "2.1.0",
+        "file": "https://cdn.uat-seeyond.minotore.com/widgets-assets/bridge/js/v2.1.0/widget-dependencies.min.js"
+    },
+    "bridge": {
+        "version": "2.1.0",
+        "file": "https://cdn.uat-seeyond.minotore.com/widgets-assets/bridge/js/v2.1.0/bridgewidget.js"
+    },
+    "widgets": {
+        "bar-application": {
+            "version": "3.0.0",
+            "source": {
+                "root": "apps/bar-application",
+                "src": "apps/bar-application/src",
+                "element": "elements/bar-application"
+            },
+            "mwidget": true,
+            "name": "bar-application"
+        },
+        "bar-chart": {
+            "version": "8.0.0",
+            "source": {
+                "root": "apps/bar-chart",
+                "src": "apps/bar-chart/src",
+                "element": "elements/bar-chart"
+            },
+            "mwidget": true,
+            "name": "bar-chart"
+        }
+    }
+}

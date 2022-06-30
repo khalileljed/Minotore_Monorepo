@@ -1,0 +1,136 @@
+
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Magazines">
+    <mat-card class="example-container mat-elevation-z8" style="margin: 100px; padding: 0%;">
+      <mat-toolbar >      
+        <mat-card-title style="color:grey; font-family:sans-serif; ">Library Name: {{ library }} - List of Magazines</mat-card-title>
+
+      </mat-toolbar>
+
+      <mat-divider inset></mat-divider>
+      <mat-card-content>
+        <div class="example-container mat-elevation-z8" style="margin: 10px;">
+      
+          <div class="example-table-container">
+            
+            <table mat-table [dataSource]="dataSourceMagazine">
+        
+              <!-- Number Column -->
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>ID</th>
+                <td mat-cell *matCellDef="let element">{{element.id}}</td>
+              </ng-container>
+        
+              <!-- Title Column -->
+              <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef>Title</th>
+                <td mat-cell *matCellDef="let element">{{element.title}}</td>
+              </ng-container>
+              <!-- Number Column -->
+              <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef>Price</th>
+                <td mat-cell *matCellDef="let element">{{element.price}}</td>
+              </ng-container>
+              <!-- State Column -->
+              <ng-container matColumnDef="totalUnitsSold">
+                <th mat-header-cell *matHeaderCellDef>Total Units Sold</th>
+                <td mat-cell *matCellDef="let element">{{element.totalUnitsSold}}</td>
+              </ng-container>
+              <!-- State Column -->
+              <ng-container matColumnDef="nbPages">
+                <th mat-header-cell *matHeaderCellDef>Nb Pages</th>
+                <td mat-cell *matCellDef="let element">{{element.nbPages}}</td>
+              </ng-container>
+              <!-- State Column -->
+              <ng-container matColumnDef="publicationDate">
+                <th mat-header-cell *matHeaderCellDef>Publication Date</th>
+                <td mat-cell *matCellDef="let element">{{element.publicationDate}}</td>
+              </ng-container>
+              <!-- State Column -->
+              <ng-container matColumnDef="category">
+                <th mat-header-cell *matHeaderCellDef>Category</th>
+                <td mat-cell *matCellDef="let element">{{element.category}}</td>
+              </ng-container>
+              <ng-container matColumnDef="nextReleaseDate">
+                <th mat-header-cell *matHeaderCellDef>Next Release Date</th>
+                <td mat-cell *matCellDef="let element">{{element.nextReleaseDate}}</td>
+              </ng-container>
+              <!-- State Column -->
+              <tr mat-header-row *matHeaderRowDef="displayedColumnsMagazine"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumnsMagazine;"></tr>
+            </table>
+          </div>
+        </div>      
+      </mat-card-content>
+      <mat-card-footer style="padding-bottom: 4mm;">
+      </mat-card-footer>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="Novels">
+    <mat-card class="example-container mat-elevation-z8" style="margin: 100px; padding: 0%;">
+      <mat-toolbar >      
+        <mat-card-title style="color:grey; font-family:sans-serif; ">Library Name: {{ library }} - List of Novels</mat-card-title>
+
+      </mat-toolbar>
+
+      <mat-divider inset></mat-divider>
+      <mat-card-content>
+        <div class="example-container mat-elevation-z8" style="margin: 10px;">
+      
+          <div class="example-table-container">
+            
+            <table mat-table [dataSource]="dataSourceNovel">
+        
+              <!-- Number Column -->
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>ID</th>
+                <td mat-cell *matCellDef="let element">{{element.id}}</td>
+              </ng-container>
+        
+              <!-- Title Column -->
+              <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef>Title</th>
+                <td mat-cell *matCellDef="let element">{{element.title}}</td>
+              </ng-container>
+              <!-- Number Column -->
+              <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef>Price</th>
+                <td mat-cell *matCellDef="let element">{{element.price}}</td>
+              </ng-container>
+              <!-- State Column -->
+              <ng-container matColumnDef="totalUnitsSold">
+                <th mat-header-cell *matHeaderCellDef>Total Units Sold</th>
+                <td mat-cell *matCellDef="let element">{{element.totalUnitsSold}}</td>
+              </ng-container>
+              <!-- State Column -->
+              <ng-container matColumnDef="nbPages">
+                <th mat-header-cell *matHeaderCellDef>Nb Pages</th>
+                <td mat-cell *matCellDef="let element">{{element.nbPages}}</td>
+              </ng-container>
+              <!-- State Column -->
+              <ng-container matColumnDef="publicationDate">
+                <th mat-header-cell *matHeaderCellDef>Publication Date</th>
+                <td mat-cell *matCellDef="let element">{{element.publicationDate}}</td>
+              </ng-container>
+              <!-- State Column -->
+              <ng-container matColumnDef="category">
+                <th mat-header-cell *matHeaderCellDef>Category</th>
+                <td mat-cell *matCellDef="let element">{{element.category}}</td>
+              </ng-container>
+              <ng-container matColumnDef="storySummary">
+                <th mat-header-cell *matHeaderCellDef>Story Summary</th>
+                <td mat-cell *matCellDef="let element">{{element.storySummary}}</td>
+              </ng-container>
+              <!-- State Column -->
+              <tr mat-header-row *matHeaderRowDef="displayedColumnsNovel"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumnsNovel;"></tr>
+            </table>
+          </div>
+        </div>      
+      </mat-card-content>
+      <mat-card-footer style="padding-bottom: 4mm;">
+      </mat-card-footer>
+    </mat-card>
+  </mat-tab>
+</mat-tab-group>
+

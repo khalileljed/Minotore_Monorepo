@@ -1,0 +1,24 @@
+{
+  "npmScope": "lyxormicrosite",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "bar-application": {
+      "tags": []
+    },
+    "bar-application-e2e": {
+      "tags": []
+    },
+    "bar-chart": {
+      "tags": []
+    },
+    "bar-chart-e2e": {
+      "tags": []
+    }
+  }
+}

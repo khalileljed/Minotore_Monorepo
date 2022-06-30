@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<global-config xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/C:/Users/jawher.allani/Desktop/Global%20Config%20XSD/GlobalConfiguration.xsd">
+    <widget selector="smart-table" category="Product Data"/>
+    <layouts>
+        <layout layout-type="Pixel" value="500x500px"/>
+    </layouts>
+    <parameters>
+    </parameters>
+</global-config>
